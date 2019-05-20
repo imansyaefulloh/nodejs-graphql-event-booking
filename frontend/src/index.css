@@ -5,9 +5,11 @@ body {
 }
 
 .form-control label,
-.form-control input {
+.form-control input,
+.form-control textarea {
     width: 100%;
     display: block;
+    padding: .25rem;
 }
 
 .form-control label {
