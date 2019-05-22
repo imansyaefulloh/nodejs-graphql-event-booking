@@ -64,7 +64,7 @@ const user = async userId => {
       ...user._doc,
       _id: user.id,
       password: null, // hide password
-      createdEvents: eventLoader.load.bind(this, user._doc.createdEvents)
+      createdEvents: () => eventLoader.loadMany(user._doc.createdEvents)
     };
   } catch (err) {
     throw err;
